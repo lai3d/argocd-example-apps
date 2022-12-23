@@ -23,22 +23,3 @@ spec:
       credentialName: cert-guestbook
     hosts:
     - "guestbook.bet777.win"
----
-apiVersion: networking.istio.io/v1alpha3
-kind: VirtualService
-metadata:
-  name: guestbook-vs
-spec:
-  hosts:
-  - "guestbook.bet777.win"
-  gateways:
-  - guestbook-gateway
-  http:
-  - match:
-    - uri:
-        prefix: /
-    route:
-    - destination:
-        port:
-          number: 80
-        host: guestbook-ui

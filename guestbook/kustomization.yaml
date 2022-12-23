@@ -1,5 +1,6 @@
 resources:
 - cert-guestbook.yaml
-- guestbook.yaml
 - guestbook-ui-deployment.yaml
 - guestbook-ui-svc.yaml
+- guestbook-gateway.yaml
+- guestbook-vs.yaml
