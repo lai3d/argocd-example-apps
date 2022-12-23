@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rabbitmq
+  namespace: sock-shop
   labels:
     name: rabbitmq
 spec:

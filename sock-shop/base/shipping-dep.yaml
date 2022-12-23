@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: shipping
+  namespace: sock-shop
   labels:
     name: shipping
 spec:
