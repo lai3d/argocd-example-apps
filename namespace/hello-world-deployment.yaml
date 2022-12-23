@@ -15,7 +15,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+      - image: nginx:latest
         name: nginx
         ports:
         - containerPort: 80
