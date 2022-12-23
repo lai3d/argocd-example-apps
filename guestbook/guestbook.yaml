@@ -1,0 +1,55 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: guestbook-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http-guestbook
+      protocol: HTTP
+    tls:
+      httpsRedirect: true
+    hosts:
+    - "guestbook.bet777.win"
+  - port:
+      number: 443
+      name: https-guestbook
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: cert-guestbook
+    hosts:
+    - "guestbook.bet777.win"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: guestbook-vs
+  namespace: istio-system
+spec:
+  hosts:
+  - "guestbook.bet777.win"
+  gateways:
+  - guestbook-gateway
+  http:
+  - route:
+    - destination:
+        host: guestbook
+        port:
+          number: 80
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: guestbook
+  namespace: istio-system
+spec:
+  host: guestbook
+  trafficPolicy:
+    tls:
+      mode: DISABLE
+---
