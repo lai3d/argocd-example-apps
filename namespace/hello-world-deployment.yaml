@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - image: nginx:latest
-        name: hello-world
+        name: nginx
         ports:
         - containerPort: 80
