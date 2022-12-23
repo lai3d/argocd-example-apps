@@ -1,0 +1,26 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: sock-shop-gateway
+  namespace: sock-shop
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http-sock-shop
+      protocol: HTTP
+    tls:
+      httpsRedirect: true
+    hosts:
+    - "sock-shop.bet777.win"
+  - port:
+      number: 443
+      name: https-sock-shop
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: sock-shop-cert
+    hosts:
+    - "sock-shop.bet777.win"

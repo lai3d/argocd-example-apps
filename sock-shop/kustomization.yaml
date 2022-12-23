@@ -1,5 +1,7 @@
 resources:
 - sock-shop-namespace.yaml
+- sock-shop-cert.yaml
+- sock-shop-gateway.yaml
 - base/carts-db-dep.yaml
 - base/carts-db-svc.yaml
 - base/carts-dep.yaml
@@ -27,3 +29,4 @@ resources:
 - base/user-db-svc.yaml
 - base/user-dep.yaml
 - base/user-svc.yaml
+- sock-shop-vs.yaml
