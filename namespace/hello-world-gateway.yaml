@@ -23,4 +23,4 @@ spec:
       mode: SIMPLE
       credentialName: cert-hello-world
     hosts:
-    - "hello-word.bet777.win"
+    - "hello-world.bet777.win"

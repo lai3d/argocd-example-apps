@@ -1,5 +1,5 @@
 resources:
-- namespace-hello-world.yaml
+- hello-world-namespace.yaml
 - cert-hello-world.yaml
 - hello-world-deployment.yaml
 - hello-world-svc.yaml
