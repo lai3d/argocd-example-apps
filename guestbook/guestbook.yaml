@@ -36,8 +36,11 @@ spec:
   gateways:
   - guestbook-gateway
   http:
-  - route:
+  - match:
+    - uri:
+        prefix: /
+    route:
     - destination:
-        host: guestbook-vs
         port:
           number: 80
+        host: guestbook-vs
