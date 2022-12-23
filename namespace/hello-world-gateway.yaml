@@ -1,0 +1,26 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: hello-world-gateway
+  namespace: hello-world
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http-hello-world
+      protocol: HTTP
+    tls:
+      httpsRedirect: true
+    hosts:
+    - "hello-world.bet777.win"
+  - port:
+      number: 443
+      name: https-hello-world
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName: cert-hello-world
+    hosts:
+    - "hello-word.bet777.win"
