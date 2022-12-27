@@ -1,6 +1,6 @@
 resources:
 - hello-world-namespace.yaml
-- cert-hello-world.yaml
+- hello-world-cert.yaml
 - hello-world-deployment.yaml
 - hello-world-svc.yaml
 - hello-world-gateway.yaml
