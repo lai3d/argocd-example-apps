@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: de-webclient-slots777
+  namespace: slots777win
 spec:
   replicas: 1
   revisionHistoryLimit: 3
