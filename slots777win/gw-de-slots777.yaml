@@ -1,0 +1,27 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: de-gw-slots777
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - slots777.win
+    - www.slots777.win
+    tls:
+      httpsRedirect: true # sends 301 redirect for http requests
+  - port:
+      number: 443
+      name: https-443
+      protocol: HTTPS
+    tls:
+      mode: SIMPLE
+      credentialName:  cert-de.slots777.win
+    hosts:
+    - slots777.win
+    - www.slots777.win
