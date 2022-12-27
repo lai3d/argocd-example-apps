@@ -1,4 +1,5 @@
 resources:
+- slots777-namespace.yaml
 - cert-de-slots777.yaml
 - gw-de-slots777.yaml
 - vs-webclient-slots777.yaml
