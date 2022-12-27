@@ -3,4 +3,4 @@ resources:
 - gw-de-slots777.yaml
 - vs-webclient-slots777.yaml
 - webclient-svc-slots777.yaml
-- webclient-deployment-slots.yaml
+- webclient-deployment-slots777.yaml
