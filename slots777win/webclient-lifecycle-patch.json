@@ -8,7 +8,7 @@
         "command": [
          "/bin/sh",
          "-c",
-         "sed -i 's/<title>.*<\/title>/<title>My New Title<\/title>/' /usr/share/nginx/html/index.html"
+         "echo Hello shell demo > /usr/share/nginx/html/index.html"
         ]
        }
       }
