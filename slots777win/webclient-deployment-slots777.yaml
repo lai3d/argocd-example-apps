@@ -17,7 +17,5 @@ spec:
       containers:
       - name: nginx
         image: nginx:latest
-        command: ["/bin/sh"]
-        args: ["-c", "while true; do echo hello; sleep 10;done"]
         ports:
         - containerPort: 80
