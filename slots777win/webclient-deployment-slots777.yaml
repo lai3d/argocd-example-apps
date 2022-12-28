@@ -17,5 +17,10 @@ spec:
       containers:
       - name: nginx
         image: nginx:latest
+        lifecycle:
+          postStart:
+            exec:
+              command:
+                ['/bin/sh', '-c', 'echo Hello shell demo > /usr/share/nginx/html/index.html']
         ports:
         - containerPort: 80
