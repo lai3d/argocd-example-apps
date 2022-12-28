@@ -15,7 +15,8 @@ spec:
         app: de-webclient-slots777
     spec:
       containers:
-      - image: nginx:latest
-        name: nginx
+      - name: nginx
+        image: nginx:latest
+        command: ["start", "--host", "$(MY_SERVICE_NAME)"]
         ports:
         - containerPort: 80

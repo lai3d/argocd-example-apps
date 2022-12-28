@@ -1,3 +1,6 @@
+namePrefix: dev-
+nameSuffix: "-001"
+
 resources:
 - slots777-namespace.yaml
 - cert-de-slots777.yaml
@@ -5,3 +8,10 @@ resources:
 - vs-webclient-slots777.yaml
 - webclient-svc-slots777.yaml
 - webclient-deployment-slots777.yaml
+
+vars:
+- name: MY_SERVICE_NAME
+  objref:
+    kind: Service
+    name: de-webclient-slots777
+    apiVersion: v1
